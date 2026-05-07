@@ -12,21 +12,28 @@ function closeMenu() {
   document.body.style.overflow = '';
 }
 
-// Double rAF ensures Chrome finishes layout+paint before we check positions
-requestAnimationFrame(() => requestAnimationFrame(() => {
-  const obs = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add('visible');
-  }), { threshold: 0.08, rootMargin: '0px 0px -10px 0px' });
+// Chrome fix: void offsetHeight forces reflow so CSS transition fires properly
+function makeVisible(el) {
+  void el.offsetHeight;
+  el.classList.add('visible');
+}
+const obs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) makeVisible(e.target);
+}), { threshold: 0.08 });
 
-  document.querySelectorAll('.fade-in').forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      el.classList.add('visible');
-    } else {
-      obs.observe(el);
-    }
+// Use window 'load' so Chrome has fully painted before we check positions
+window.addEventListener('load', () => {
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.fade-in').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        makeVisible(el);
+      } else {
+        obs.observe(el);
+      }
+    });
   });
-}));
+});
 
 function triggerUpload(box) {
   // If image already loaded, show lightbox instead
