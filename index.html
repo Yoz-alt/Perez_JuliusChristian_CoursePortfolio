@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perez_JuliusChristian_CoursePortfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:ital,wght@0,200;0,300;0,400;1,200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="#cover" class="nav-brand">⬡ ART APPRECIATION </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#outputs">Outputs</a></li>
+  </ul>
+  <button class="nav-burger" id="navBurger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile full-screen overlay menu -->
+<div class="mobile-menu" id="navLinks">
+  <ul class="mobile-menu-list">
+    <li><a href="#cover"   class="mob-link active" onclick="closeMenu()"><span class="mob-slash"></span>HOME</a></li>
+    <li><a href="#about"   class="mob-link"        onclick="closeMenu()">ABOUT</a></li>
+    <li><a href="#outputs" class="mob-link"        onclick="closeMenu()">OUTPUTS</a></li>
+  </ul>
+</div>
+
+<!-- COVER -->
+<section id="cover">
+  <h1 class="cover-title">
+    <span class="l1">MY</span>
+    <span class="l2">Portfolio</span>
+  </h1>
+  <p class="cover-sub">A collection of artworks &amp; outputs from the semester</p>
+  <div class="cover-line"></div>
+  <div class="cover-meta">
+    <div style="color:var(--dim)">STUDENT ▸</div>
+     <div style="color:var(--lime);text-shadow:var(--glow-lime);font-size:.78rem;">JULIUS CHRISTIAN S. PEREZ</div>
+    <div style="color:var(--dim)">COURSE ▸</div>
+    <div style="color:var(--lime);text-shadow:var(--glow-lime);font-size:.78rem;">BSIT - 1B</div>
+    <div style="color:var(--dim)">DATE ▸</div>
+     <div style="color:var(--lime);text-shadow:var(--glow-lime);font-size:.78rem;">MAY 9 2026</div>
+  </div>
+  <div class="scroll-cue">SCROLL</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container fade-in">
+    <div class="tag tag-cyan">Introduction</div>
+    <h2 class="sec-title" style="color:var(--cyan);text-shadow:var(--glow-cyan);">About This<br>Portfolio</h2>
+ 
+    <div class="about-top-row">
+      <div class="about-left">
+        <p class="sec-intro">This portfolio documents my journey through Art Appreciation, compiling all artworks, reflections, and process documentation that showcase my growth throughout the semester.</p>
+        <div class="about-grid">
+          <div class="about-card">
+            <h4>ACTIVITIES</h4>
+            <div class="big-num">08</div>
+          </div>
+          <div class="about-card">
+            <h4>PROJECTS</h4>
+            <div class="big-num">02</div>
+          </div>
+          <div class="about-card">
+            <h4>EXAM</h4>
+            <div class="big-num">01</div>
+          </div>
+          <div class="about-card" style="display:flex;flex-direction:column;justify-content:center;">
+            <h4>Total Outputs</h4>
+            <div class="big-num">11</div>
+            <p style="margin-top:.3rem;font-size:.75rem;">activities this semester</p>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Profile Photo RIGHT -->
+      <div class="about-photo-wrap">
+        <div class="about-photo-box" onclick="triggerUpload(this)" title="Click to upload your photo">
+          <img src="d.jpg" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div class="ph-ico" style="font-size:2.5rem;"></div>
+        </div>
+        <!-- Contact Info -->
+        <div class="about-contact">
+          <div class="about-social-btns">
+            <a href="https://www.tiktok.com/@jukiusperez?_r=1&_t=ZS-967pLup20kG" target="_blank" class="social-icon-btn social-tiktok">
+              <svg width="45" height="45" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.75a8.16 8.16 0 0 0 4.77 1.52V6.79a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/juliuschristian.solsonaperez" target="_blank" class="social-icon-btn social-fb">
+              <svg width="45" height="45" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/juls_yoz/" target="_blank" class="social-icon-btn social-ig">
+              <svg width="45" height="45" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+
+
+      </div>
+    </div>
+ 
+  </div>
+</section>
+
+<!-- OUTPUTS -->
+<section id="outputs">
+  <div class="wide">
+    <div class="tag tag-pink">Works &amp; Outputs</div>
+    <h2 class="sec-title" style="color:var(--pink);text-shadow:var(--glow-pink);">Semester<br>Activities</h2>
+    <p class="sec-intro">Each entry includes the final output, process documentation, and a personal reflection on the creative experience.</p>
+ 
+    <div class="outputs-grid">
+
+      <!-- ═══ ACTIVITIES ═══ -->
+      <div class="section-divider">
+        <div class="section-divider-line"></div>
+        <div class="section-divider-label tag-pink">⬡ &nbsp;ACTIVITIES &nbsp;( 08 )</div>
+        <div class="section-divider-line"></div>
+      </div>
+
+      <!-- OUTPUT 1 -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">01</div>
+          <div class="output-info">
+            <div class="output-num">Art Around Me: Reflection Check In</div>
+            <div class="tag tag-cyan">January 19 2026</div>
+          </div>
+        </div>
+        <div class="output-body">
+          <div class="img-grid">
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="a1.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a,1.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a.1.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="tag tag-cyan">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">This activity opened my eyes to the idea that art isn't limited to paintings or sculptures it exists in the everyday objects around us. I chose a toaster oven as my subject and realized that its geometric form, contrasting colors, and deliberate design choices are all elements of visual art. It was interesting to analyze something so familiar through an artistic lens, identifying shape and color as the most dominant elements. This activity challenged me to look more closely at my surroundings and appreciate how function and aesthetics are intentionally merged in product design. It made me understand that art is everywhere even in the kitchen.</textarea>
+        </div>
+      </div>
+
+      <!-- OUTPUT 2 -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">02</div>
+          <div class="output-info">
+           <div class="output-num">Interface Critique Assignment</div>         
+            <div class="tag tag-cyan">February 24 2026</div>
+          </div>
+        </div>
+        <div class="output-body">
+          <div class="img-grid">
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a2.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a.2.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a,2.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="tag tag-cyan">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">Critiquing Discord's interface taught me how UI/UX design is a form of art that balances aesthetics with function using principles like clarity, consistency, and visual hierarchy. I identified five usability issues that showed me even popular apps have room for improvement in both design and accessibility. This activity sharpened my critical thinking and deepened my appreciation for how intentional design choices directly shape the user's experience.</textarea>
+        </div>
+      </div>
+
+      <!-- OUTPUT 3 -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">03</div>
+          <div class="output-info">
+            <div class="output-num">Before and After: Exploring Photo Editing Techniques</div>         
+            <div class="tag tag-cyan">March 5 2026</div>
+          </div>
+        </div>
+        <div class="output-body">
+          <div class="img-grid">
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a3.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a.3.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="a,3.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="tag tag-cyan">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">This activity helped me explore how photo editing can transform an ordinary image into something more visually appealing through techniques like color correction, brightness adjustment, and digital retouching. I used Canva to edit five photos and learned how even simple changes can greatly improve the overall look and composition of an image. It made me realize that photo editing is a creative art form where every adjustment is an intentional decision that affects the final result.
+</textarea>
+        </div>
+      </div>
+
+      <!-- OUTPUT 4 -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">04</div>
+          <div class="output-info">
+            <div class="output-card-title">Generative Art: Explore and Create Digital Art with p5.js</div>
+            <div class="tag tag-cyan">March 24 2026</div>
+          </div>
+        </div>
+        <div class="output-body">
+          <div class="out4-row">
+            <div class="out4-imgs">
+              <div class="img-box" onclick="triggerUpload(this)">
+                <img src="a4.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+              </div>
+              <div class="img-box" onclick="triggerUpload(this)">
+                <img src="a.4.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+              </div>
+            </div>
+            <div class="out4-embed">
+              <div class="p5-embed-wrap">
+                <div class="p5-embed-label">
+                  <span class="p5-dot"></span> LIVE SKETCH — p5.js
+                  <button class="p5-expand-btn" onclick="toggleP5()" id="p5ExpandBtn">⤢ SHOW FULL</button>
+                </div>
+                <iframe src="https://editor.p5js.org/perez999990/full/_2pz_Fgh9" class="p5-embed" id="p5Frame" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="d-label">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">This activity introduced me to generative art through p5.js, where I created a solar system sketch featuring Mercury, Venus, Earth, Mars, and the Moon orbiting the Sun with randomized star backgrounds. I learned how code can be used as an artistic medium, where functions like randomness make each run of the sketch visually unique and dynamic. It was exciting to see how programming and creativity can combine to produce art that is never exactly the same twice.
+</textarea>
+        </div>
+      </div>
+
+      <!-- OUTPUT 5 -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">05</div>
+          <div class="output-info">
+           <div class="output-num"> Responsive Design Test</div>         
+            <div class="tag tag-cyan">March 26 2026</div>
+          </div>
+        </div>
+        <div class="output-body">
+          <div class="img-grid">
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="a5.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a.5.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a,5.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="tag tag-cyan">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">This activity challenged me to build and test a responsive website that adapts properly across different screen sizes, which I deployed live using GitHub Pages. I learned how responsive design is not just a technical skill but also an artistic one, as it requires careful thought about layout, spacing, and visual hierarchy to ensure a good user experience on any device. Seeing my own portfolio go live at a real URL made me realize how web development combines both code and design as a form of digital art.
+</textarea>
+        </div>
+      </div>
+
+      <!-- OUTPUT 6 -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">06</div>
+          <div class="output-info">
+            <div class="output-num"> Mini Game World Concept</div>         
+            <div class="tag tag-cyan">April 15 2026</div>
+          </div>
+        </div>
+        <div class="output-body">
+          <div class="img-grid">
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="a6.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a.6.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="a,6.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="tag tag-cyan">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">For this activity, I created a pixel art game concept titled "Blood Moon Encounter," inspired by Filipino folklore, specifically the myth of the Manananggal. I used dark colors like black and purple to represent the night and mystery, while bright red and orange highlighted the blood moon and danger, with a cloaked hero named Lira standing bravely against the threat. This activity deepened my appreciation for how art can be a powerful medium for preserving and expressing cultural identity through visual storytelling.
+</textarea>
+        </div>
+      </div>
+
+      <!-- OUTPUT 7 -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">07</div>
+          <div class="output-info">
+            <div class="output-num">Filipino Digital Artist Profile Presentation</div>         
+            <div class="tag tag-cyan">April 28 2026</div>
+          </div>
+        </div>
+        <div class="output-body">
+          <div class="img-grid">
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a7.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a.7.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="a,7.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="tag tag-cyan">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">This activity allowed me to research and present the work of Kerby Rosanes, a proud Filipino illustrator known for his incredibly detailed doodle and morphing art published in bestselling books like Animorphia and Fantomorphia. Studying his journey from a self-taught artist to a globally recognized name taught me that talent, consistency, and a unique style can take Filipino art to an international stage. It inspired me to take my own creative work more seriously, knowing that a Filipino artist's vision can reach over 40 countries and collaborate with brands like Nike and Warner Bros.</textarea>
+        </div>
+      </div>
+
+      <!-- OUTPUT 8 -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">08</div>
+          <div class="output-info">
+            <div class="output-num">Art in the Digital Age:  A Reflection Paper </div>         
+            <div class="tag tag-cyan">April 30 2026</div>
+          </div>
+        </div>
+        <div class="output-body">
+          <div class="img-grid">
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="a8.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="a.8.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="a,8.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="tag tag-cyan">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">how I see art in the digital age, making me realize that technology and creativity are not opposites but powerful partners that expand how artists express and share meaningful work. As an IT student, it inspired me to see myself not just as a developer but also as a potential digital artist who can use technology to create experiences that move and connect people.
+</textarea>
+        </div>
+      </div>
+
+      <!-- ═══ PROJECTS ═══ -->
+      <div class="section-divider">
+        <div class="section-divider-line"></div>
+        <div class="section-divider-label tag-purple">⬡ &nbsp;PROJECTS &nbsp;( 02 )</div>
+        <div class="section-divider-line"></div>
+      </div>
+
+      <!-- PROJECT 1 -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">P1</div>
+          <div class="output-info">
+            <div class="output-num">Art Through Time: Traditional and Digital</div>         
+            <div class="tag tag-cyan">February 5 2026</div>
+          </div>
+        </div>
+        <div class="output-body">
+          <div class="img-grid">
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="p1.jpg" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+            <img src="p.1.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="p,1.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="tag tag-cyan">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">For this prelim project, we created a pixel art piece depicting two hands reaching toward each other against a golden sunset, representing the connection between traditional and digital art across time. This project taught me that regardless of the medium whether classical painting or digital pixels art always carries the same power to express deep human emotions and experiences.</textarea>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">P2</div>
+          <div class="output-info">
+           <div class="output-num"> START UP PROTOTYPE(Collaborative Midterm Project) </div>         
+            <div class="tag tag-cyan">April 14 2026</div>
+          </div>
+        </div>
+        <div class="output-body">
+          <div class="img-grid">
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="p2.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="p.2.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="p,2.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="tag tag-cyan">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">For our collaborative midterm project, our group designed "Care2Scholar," a startup app prototype that helps students access health services and scholarship information through a clean and intuitive mobile interface. Working with my groupmates taught me that good UI/UX design is a form of art that requires both creativity and empathy, as every design decision must consider the real needs and experience of the user.
+</textarea>
+        </div>
+      </div>
+
+      <!-- ═══ EXAM ═══ -->
+      <div class="section-divider">
+        <div class="section-divider-line"></div>
+        <div class="section-divider-label tag-lime">⬡ &nbsp;EXAM &nbsp;( 01 )</div>
+        <div class="section-divider-line"></div>
+      </div>
+
+      <!-- EXAM -->
+      <div class="output-card fade-in">
+        <div class="output-header">
+          <div class="output-num">EX</div>
+          <div class="output-info">
+            <div class="output-num">Digital Art and Design Magazine</div>         
+            <div class="tag tag-cyan">February 18 2026</div>
+          </div>
+        </div>
+       <div class="output-body">
+          <div class="img-grid">
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="ex1.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+             <img src="ex.1.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="img-box" onclick="triggerUpload(this)">
+              <img src="ex,1.png" alt="Profile Photo" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+          </div>
+        </div>
+        <div class="refl-row">
+          <span class="tag tag-cyan">Reflection</span>
+          <textarea class="d-field" rows="4" style="min-height:70px;display:block;">For the Prelim Exam, I created a Digital Art and Design Magazine that explored the history of art from Prehistory through Renaissance, Baroque, Modern, and Contemporary periods, combining visuals and layout design to present art history in an engaging and creative format. This output challenged me to think like both a designer and an art historian, using visual hierarchy and aesthetic choices to communicate how art has evolved and shaped human culture across centuries.
+</textarea>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name" id="footerName">JULIUS CHRISTIAN S. PEREZ</div>
+  <p>ART APPRECIATION &nbsp;///&nbsp; COURSE PORTFOLIO &nbsp;///&nbsp; <span id="yr"></span></p>
+</footer>
+ 
+<style>
+/* About layout: text+grid left, photo right */
+.about-top-row {
+  display:flex;align-items:flex-start;gap:2.5rem;flex-wrap:wrap;
+}
+.about-left {
+  flex:1;min-width:220px;
+}
+.about-photo-wrap {
+  display:flex;flex-direction:column;align-items:center;gap:.75rem;flex-shrink:0;
+}
+.about-photo-box {
+  width:380px;height:380px;border-radius:8px;cursor:pointer;position:relative;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:2px dashed var(--cyan,#0ff);background:rgba(0,255,255,.04);overflow:hidden;
+  transition:border-color .2s,box-shadow .2s;
+}
+.about-photo-box:hover {border-color:var(--pink,#f0f);box-shadow:0 0 18px rgba(255,0,255,.35);}
+.about-photo-box input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;}
+.about-photo-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;}
+.about-photo-label{font-size:.7rem;letter-spacing:.15em;opacity:.6;text-align:center;}
+
+/* Section dividers */
+.section-divider {
+  grid-column: 1 / -1;
+  display:flex;align-items:center;gap:1.2rem;
+  margin:2.5rem 0 1rem;
+}
+.section-divider-line {
+  flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,45,120,0.4),transparent);
+}
+.section-divider-label {
+  font-family:'Orbitron',monospace;font-size:.7rem;
+  letter-spacing:.2em;text-transform:uppercase;
+  padding:.4rem 1.2rem;white-space:nowrap;
+}
+
+/* Images in output cards → horizontal line */
+.output-body {
+  display:block !important;
+  padding:1.5rem;
+}
+.img-grid {
+  display:flex;
+  flex-direction:row;
+  gap:.75rem;
+  width:100%;
+}
+.img-grid .img-box {
+  flex:1;
+  min-width:0;
+  aspect-ratio:4/3;
+}
+</style>
+<script src="script.js"></script>
+</body>
+</html>
