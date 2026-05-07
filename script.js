@@ -13,7 +13,14 @@ function closeMenu() {
 }
 
 const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:.08});
-document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+document.querySelectorAll('.fade-in').forEach(el => {
+  const rect = el.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    el.classList.add('visible'); // already in viewport on load
+  } else {
+    obs.observe(el);
+  }
+});
 
 function triggerUpload(box) {
   // If image already loaded, show lightbox instead
