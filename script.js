@@ -12,15 +12,21 @@ function closeMenu() {
   document.body.style.overflow = '';
 }
 
-const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:.08});
-document.querySelectorAll('.fade-in').forEach(el => {
-  const rect = el.getBoundingClientRect();
-  if (rect.top < window.innerHeight && rect.bottom > 0) {
-    el.classList.add('visible'); // already in viewport on load
-  } else {
-    obs.observe(el);
-  }
-});
+// Double rAF ensures Chrome finishes layout+paint before we check positions
+requestAnimationFrame(() => requestAnimationFrame(() => {
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  }), { threshold: 0.08, rootMargin: '0px 0px -10px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    } else {
+      obs.observe(el);
+    }
+  });
+}));
 
 function triggerUpload(box) {
   // If image already loaded, show lightbox instead
